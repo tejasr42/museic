@@ -40,7 +40,7 @@ tone_analyzer = ToneAnalyzerV3(
         password="TQyCOx6MUq2H",
         version='2016-05-19')
 goals=[[0.3,0.1,0.3,0.7,0.4,0.0,0.0,0.0,0.3,0.2],[0.2,0.8,0.3,0.3,0.3,0.0,0.0,0.1,0.6,0.2],[0.4,0.3,0.5,0.8,0.2,0.0,0.0,0.1,0.6,0.5],[0.6,0.6,0.3,0.2,0.7,0.4,0.0,0.4,0.0,0.2],[0.6,0.6,0.5,0.6,0.6,0.6,0.5,0.4,0.6,0.4]]
-moods=["Calm","Excited","Empathetic","Attentive","Pseudo-intoxicated"]
+moods=["Calm","Excited","Empathetic","Attentive","Complete"]
 save=0.0
 waves=[0.0,0.0,0.0,0.0,0.0]
 count=0
@@ -179,7 +179,7 @@ if __name__ == "__main__":
                         default=5000,
                         help="The port to listen on")
     args = parser.parse_args()
-    em=int(input("Where do you want to be?: "))
+    em=int(input("Where do you want to be?: \n 0: Calm \n 1: Excited \n 2: Empathetic \n 3: Attentive \n 4: Complete\n"))
     dispatcher = dispatcher.Dispatcher()
     dispatcher.map("/debug", print)
     #dispatcher.map("/muse/eeg", eeg_handler, "EEG")
